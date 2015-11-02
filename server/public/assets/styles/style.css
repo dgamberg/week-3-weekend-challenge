@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Play|Cantarell|Electrolize|Denk+One|Unica+One);
+body{
+
+    font-family: 'Electrolize', sans-serif;
+
+}
+h3{
+    /*font-family: 'Play', sans-serif;*/
+    font-family: 'Cantarell', sans-serif;
+    /*font-family: 'Electrolize', sans-serif;*/
+    /*font-family: 'Denk One', sans-serif;*/
+    /*font-family: 'Unica One', cursive;*/
+}
+input{
+    text-align: center;
+}
+#main {
+    width: 260px;
+    border: 2px solid #337AB7;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px #999;
+}
+
+#calcOutput {
+    font-family: Helvetica, arial;
+    color: #fff;
+    border-radius: 5px;
+    width: 135px;
+    padding: 5px;
+    margin-top: -10px;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 30px;
+    font-family: 'Play', sans-serif;
+    margin-left: 35px;
+}
+
+#mainCalculator {
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#formButtons{
+    text-align: center;
+    margin-left: 10px;
+}
+#top-title {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#equalsButtonContainer{
+    text-align: center;
+}
+
+.keypad-row{
+
+}
+.keypad-number {
+    width: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding-right: 20px;
+}
+.calc-keypad-number{
+    width: 25px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding-right: 20px;
+}
+.calc-keypad-function{
+    margin-bottom: 5px;
+}
+#keypadContainer {
+    margin: 15px 0 0 25px;
+    width: 200px;
+}
+.keypad-row-top {
+    margin-bottom: 5px;
+    margin-left: 32px;
+}
+
+#clearButton {
+    width: 60px;
+    margin-left: 55px;
+}
+.keypad-function{
+    margin-right: 10px;
+    border-radius: 7px;
+}
+#keypadOutput {
+    width: 160px;
+    padding: 10px;
+    text-align: right;
+    border-radius: 4px;
+    margin-left: 25px;
+    height: 40px;
+}
