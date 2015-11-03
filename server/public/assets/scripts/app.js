@@ -1,10 +1,19 @@
-
 var values = {};
 var calcOutput = "";
-var equationContainer = [];
+var valueOne = 0;
+var valueTwo = 0;
+var calcTotal = 0;
+
 $(document).ready(function(){
     init();
 });
+
+function logAllVars(){
+    console.log("CalcOutput: ", calcOutput);
+    console.log("Two: ", valueOne);
+    console.log("Two: ", valueTwo);
+    console.log("Calc Total: ", calcTotal);
+}
 
 //event listeners
 function init(){
@@ -15,54 +24,59 @@ function init(){
         //outputContainer.push($(this).data('numkey'));
         $('#keypadOutput').text(calcOutput);
     });
-    //lower keypad
-    $('.calc-keypad-function').on('click', function(event){
-         event.preventDefault();
-    });
 
     //clear button
     $('#clearButton').on('click', function(event){
         event.preventDefault();
-        $('#calcOutput').text("0");
         $('#keypadOutput').text("0");
         calcOutput = "";
-        equationContainer = [];
+        valueOne = 0;
+        valueTwo = 0;
+        calcTotal = 0;
 
     });
-    //New ADD BUTTON
+
+    //Equals Button
+    $('#equalsButton').on('click', function(event){
+        event.preventDefault();
+        submitFunctions(event);
+        calcTotal = parseInt(valueOne) + parseInt(valueTwo);
+        logAllVars();
+
+    });
+
+    //ADD BUTTON
     $('#calcAddButton').on('click', function(event){
+        event.preventDefault();
         submitFunctions(event);
-        equationContainer.push(calcOutput);
-        equationContainer.push("+");
-        calcOutput = "";
-        $('#keypadOutput').text("0");
-        console.log(equationContainer);
-    });
+        //write an add function that takes 2 args instead
+        if(valueOne == 0){
+            // if there is no numbers
+            valueOne = calcOutput;
+            calcOutput = "";
+        }
+        else if (valueOne > 0 && valueTwo == 0) {
+            //if there is one number
+            calcTotal = parseFloat(valueOne) + calcTotal;
+            calcOutput = "";
+            logAllVars();
+        }
+        else if (valueOne > 0 && valueTwo > 0 ){
+            // if we have both numbers
+            calcTotal = parseFloat(valueOne) + parseFloat(valueTwo)
+            calcOutput = "";
+            logAllVars();
+        }
 
-
-    $('#addButton').on('click', function(event){
-        submitFunctions(event);
-        callAjaxAddFunction();
-    });
-    $('#subtractButton').on('click', function(event){
-        submitFunctions(event);
-        callAjaxSubtractFunction();
-    });
-    $('#multiplyButton').on('click', function(event){
-        submitFunctions(event);
-        callAjaxMultiplyFunction();
-    });
-    $('#divideButton').on('click', function(event){
-        submitFunctions(event);
-        callAjaxDivideFunction();
     });
 }
 function submitFunctions(event){
     event.preventDefault();
-    $.each($('#mainCalculator').serializeArray(), function(i, field){
+    var $calc = $('#mainCalculator');
+    $.each($calc.serializeArray(), function(i, field){
         values[field.name] = field.value;
     });
-    $('#mainCalculator').find("input[type=text]").val("");
+    $calc.find("input[type=text]").val("");
 }
 
 function callAjaxAddFunction(){
@@ -108,3 +122,21 @@ function callAjaxDivideFunction(){
         }
     });
 }
+
+
+$('#addButton').on('click', function(event){
+    submitFunctions(event);
+    callAjaxAddFunction();
+});
+$('#subtractButton').on('click', function(event){
+    submitFunctions(event);
+    callAjaxSubtractFunction();
+});
+$('#multiplyButton').on('click', function(event){
+    submitFunctions(event);
+    callAjaxMultiplyFunction();
+});
+$('#divideButton').on('click', function(event){
+    submitFunctions(event);
+    callAjaxDivideFunction();
+});

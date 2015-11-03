@@ -81,12 +81,13 @@ input{
 }
 .keypad-row-top {
     margin-bottom: 5px;
-    margin-left: 32px;
+    margin-left: -10px;
 }
 
 #clearButton {
-    width: 60px;
-    margin-left: 55px;
+    width: 75px;
+    margin-left: 11px;
+    margin-top: -5px;
 }
 .keypad-function{
     margin-right: 10px;
@@ -99,4 +100,14 @@ input{
     border-radius: 4px;
     margin-left: 25px;
     height: 40px;
+    margin-bottom: -10px;
+}
+#calcAddButton{
+    width: 75px;
+}
+#equalsButton {
+    width: 75px;
+    margin-left: 5px;
+    margin-top: 1px;
+    padding-left: 20px;
 }

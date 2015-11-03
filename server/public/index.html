@@ -11,39 +11,7 @@
 </head>
 <body>
     <div id="main" class="container well">
-        <section  class="container">
-            <h3 id="top-title">Server Calculator</h3>
-            <form id="mainCalculator" class="form">
-                <div class="form-container">
-                    <div class="form-group">
-                           <input class="form-control" type="text" id="valueInput1" name="valueInput1" placeholder="1st Number">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="text" id="valueInput2" name="valueInput2" placeholder="2nd Number">
-                    </div>
-                    <div id="formButtons" class="form-group">
-                        <div class="btn-group" role="group">
-                            <button  id='addButton' class='btn btn-primary keypad-function'>+</button>
-                            <button  id='subtractButton' class='btn btn-primary keypad-function'>-</button>
-                            <button  id='multiplyButton' class='btn btn-primary keypad-function'>x</button>
-                            <button  id='divideButton' class='btn btn-primary keypad-function'>/</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </section>
-
-        <section class="container">
-            <div id="calcOutput" class="bg-primary">0</div>
-        </section>
-        <hr/>
-        <div class="keypad-row-top">
-            <button  id='clearButton' class='btn btn-primary'>Clear</button>
-        </div>
-        <hr/>
-
-        <form>
+        <form id="mainCalculator" class="form">
             <section class="container">
                 <div>
                     <div id="keypadOutput" class="bg-primary">0</div>
@@ -51,29 +19,35 @@
             </section>
             <section  class="container">
                 <div id="keypadContainer">
+
                     <div class="keypad-row">
                         <button class="calc-keypad-number btn btn-primary" data-numKey="1">1</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="2">2</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="3">3</button>
-                        <button  id='calcAddButton' data-numKey="+" class='btn btn-primary calc-keypad-function'>+</button>
+                        <button  id='calcSubtractButton' data-numKey="-" class='calc-keypad-number btn btn-primary'>-</button>
                     </div>
                     <div class="keypad-row">
                         <button class="calc-keypad-number btn btn-primary" data-numKey="4">4</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="5">5</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="6">6</button>
-                        <button  id='calcSubtractButton' data-numKey="-" class='calc-keypad-number btn btn-primary'>-</button>
+                        <button  id='calcMultiplyButton' data-numKey="x" class='calc-keypad-number btn btn-primary'>x</button>
                     </div>
                     <div class="keypad-row">
                         <button class="calc-keypad-number btn btn-primary" data-numKey="7">7</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="8">8</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="9">9</button>
-                        <button  id='calcMultiplyButton' data-numKey="x" class='calc-keypad-number btn btn-primary'>x</button>
+                        <button  id='calcDivideButton' data-numKey="/" class='calc-keypad-number btn btn-primary'>/</button>
                     </div>
                     <div class="keypad-row">
                         <button class="calc-keypad-number btn btn-primary" data-numKey=".">.</button>
                         <button class="calc-keypad-number btn btn-primary" data-numKey="0">0</button>
-                        <button class="calc-keypad-number btn btn-primary" data-numKey="equals">=</button>
-                        <button  id='calcDivideButton' data-numKey="/" class='calc-keypad-number btn btn-primary'>/</button>
+                        <button  id='calcAddButton' data-numKey="+" class='btn btn-primary calc-keypad-function'>+</button>
+
+
+                    </div>
+                    <div class="keypad-row-top">
+                        <button  id='clearButton' class='btn btn-primary'>Clear</button>
+                        <button id="equalsButton" class="calc-keypad-number btn btn-primary" data-numKey="equals">=</button>
                     </div>
                 </div>
             </section>

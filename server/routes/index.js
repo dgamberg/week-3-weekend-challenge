@@ -15,10 +15,10 @@ router.route('/multiply');
 router.route('/divide');
 
 //Math Object Imports From Modules
-router.post('/add',      function(req, res){res.send( createAdditionObject(req) );}) ;
-router.post('/subtract', function(req, res){res.send( createSubtractionObject(req) ); });
-router.post('/multiply', function(req, res){res.send( createMultiplyObject(req) ); });
-router.post('/divide',   function(req, res){res.send( createDivideObject(req) ); });
+router.post('/add',      function(req, res){ res.send( createAdditionObject(req) );}) ;
+router.post('/subtract', function(req, res){ res.send( createSubtractionObject(req) ); });
+router.post('/multiply', function(req, res){ res.send( createMultiplyObject(req) ); });
+router.post('/divide',   function(req, res){ res.send( createDivideObject(req) ); });
 
 router.get('/*', function (req, res){
     var file = req.params[0] || "index.html";
