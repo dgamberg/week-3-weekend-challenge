@@ -1,10 +1,12 @@
 var createAdditionObject = function(req){
     var output = {};
-    output["value1"] = req.body.valueInput1;
-    output["value2"] = req.body.valueInput2;
-    output["operation"] = "added";
-    output["outputTotal"] = parseInt(output["value1"]) + parseInt(output["value2"]);
+    output.valueOne = req.body.valueOne;
+    output.valueTwo = req.body.valueTwo;
+    output.operation = "added";
+    output.outputTotal = parseFloat(output.valueOne) + parseFloat(output.valueTwo);
+    console.log(output);
     return output;
+    console.log(output);
 }
 module.exports = createAdditionObject;
 
