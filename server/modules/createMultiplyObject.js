@@ -1,9 +1,9 @@
 var createMultiplyObject = function(req){
     var output = {};
-    output["value1"] = req.body.valueInput1;
-    output["value2"] = req.body.valueInput2;
-    output["operation"] = "Multiplied";
-    output["outputTotal"] = parseInt(output["value1"]) * parseInt(output["value2"]);
+    output.valueOne = req.body.valueOne;
+    output.valueTwo = req.body.valueTwo;
+    output.operation = "multiplied";
+    output.outputTotal = parseInt(output.valueOne) * parseInt(output.valueTwo);
     return output;
 }
 module.exports = createMultiplyObject;
