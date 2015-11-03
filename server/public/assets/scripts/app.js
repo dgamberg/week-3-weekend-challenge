@@ -30,9 +30,9 @@ function init(){
             valueTwo = calcWindowOutput;
             equationObject["valueTwo"] = calcWindowOutput;
             //switch CASE
-            switch(equationObject.operation){
-                case: "",
-            }
+            //switch(equationObject.operation){
+            //    case: "",
+            //}
             callAjaxAddFunction();
             console.log("Current Object", equationObject);
         }
