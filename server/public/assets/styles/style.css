@@ -40,8 +40,7 @@ input{
 #mainCalculator {
     width: 200px;
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 10px 0 5px -10px;
     border-radius: 5px;
 }
 
